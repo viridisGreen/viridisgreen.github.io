@@ -2,154 +2,305 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Hesong Wang</title>
-
-    <meta name="author" content="Yanhong Zeng">
+    <meta name="author" content="Hesong Wang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
+    <style>
+      * { font-family: Optima, 'Comic Sans MS', 'Comic Neue', sans-serif !important; }
+
+      body {
+        background-color: #D9E6E0;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #006564;
+      }
+
+      table, p, h3, h4, h5, h6, a, li, span, div { font-size: 18px; }
+      p { margin-block-start: 0.5em; margin-block-end: 0.5em; }
+
+      h1, h2 {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #006564;
+        background: rgba(220, 211, 188, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 16px rgba(74, 124, 89, 0.1);
+        padding: 8px 20px;
+        border-radius: 16px;
+        text-align: center;
+        margin-bottom: 12px;
+        margin-top: 20px;
+      }
+
+      a { color: #1772d0; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .name-header { font-size: 28px !important; font-weight: bold; margin-bottom: 10px; }
+
+      /* News */
+      .news-scroll-box {
+        height: 250px;
+        overflow-y: scroll;
+        padding: 0;
+        margin-bottom: 10px;
+        scrollbar-width: thin;
+        scrollbar-color: #006564 transparent;
+      }
+      .news-scroll-box::-webkit-scrollbar { width: 6px; }
+      .news-scroll-box::-webkit-scrollbar-track { background: transparent; }
+      .news-scroll-box::-webkit-scrollbar-thumb { background-color: #006564; border-radius: 3px; }
+
+      .news-list { list-style-type: disc; padding-left: 20px; margin-left: 5px; margin-top: 5px; }
+      .news-list li { margin-bottom: 6px; line-height: 1.35; }
+
+      .date-badge {
+        background-color: #C8CCCE;
+        color: #00A19B;
+        padding: 1px 5px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-right: 4px;
+      }
+
+      /* Publications */
+      .pub-card {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        padding: 18px;
+        margin-bottom: 18px;
+        display: grid;
+        grid-template-columns: 210px minmax(0, 1fr);
+        gap: 22px;
+        align-items: center;
+        box-shadow: 0 8px 32px rgba(74, 124, 89, 0.12);
+      }
+      .pub-card-thumb { width: 100%; }
+      .pub-card-thumb img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        display: block;
+      }
+      .pub-card-info { min-width: 0; }
+
+      .paper-tag {
+        background: rgba(200, 204, 206, 0.5);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        color: #00A19B;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        padding: 4px 0;
+        border-radius: 8px 8px 0 0;
+        width: 100%;
+        line-height: 1.2;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: none;
+      }
+
+      .papertitle { font-size: 18px !important; font-weight: 700; }
+      .pub-info { font-size: 16px !important; }
+      .pub-info a, .pub-info em, .pub-info strong, .pub-info sup { font-size: 16px !important; }
+
+      /* Experiences */
+      .exp-card { display: flex; align-items: center; gap: 20px; }
+      .exp-card img { width: 210px; }
+      .exp-info p, .exp-info a, .exp-info { font-size: 16px !important; }
+      .exp-info h3 { font-size: 18px !important; }
+    </style>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Hesong Wang 王鹤淞 
-                </p>
-                <p>
-                I'm currently a fourth-year student at <a href="https://www.bupt.edu.cn/">Beijing University of Posts and Telecommunications</a> (Beijing, China), majoring in Telecommunications Engineering.
-                </p>
-                <p>
-                My research interest lies in the field of artificial intelligence, especially in <a href="https://github.com/MingSun-Tse/Efficient-Deep-Learning">Efficient AI</a>. Now, I'm a visiting student at ENCODE Lab, advised by <a href="https://huanwang.tech/">Huan Wang</a>.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:viridisgreen27@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/viridisGreen/">Github</a> &nbsp;&nbsp;
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/profiles/me-square.gif"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profiles/me-square.gif" class="hoverZoomLink"></a>
-              <!-- <p>status: struggle with ddl</p> -->
-              </td>
-            </tr>
-          </tbody></table>
+    <table style="width:100%;max-width:900px;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+      <tr><td style="padding:0">
 
-<!-- ==================== News ============================================ -->
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-      <td style="padding:20px;width:100%;vertical-align:middle">
-        <h1>Recent News</h1>
+        <!-- Bio -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+          <tr>
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p class="name-header" style="text-align:center;">Hesong Wang  王鹤淞</p>
+              <p>
+                Hi👋🏻, I'm Hesong Wang, currently a first-year PhD student at <a href="https://www.westlake.edu.cn/">Westlake University</a> in a joint program with <a href="https://www.zju.edu.cn/">Zhejiang University</a>, advised by <strong style="color:#C2262E;">Prof. <a href="https://huanwang.tech/" style="color:#C2262E;">Huan Wang</a></strong>. Previously, I received my B.E. degree from <a href="https://www.bupt.edu.cn/">BUPT</a> in 2025.
+              </p>
+              <p>
+                My research interests lie in multimodal large language models (e.g., <span style="color:#C2262E; font-weight:bold;">VideoLLMs</span>), inference performance optimization, and general efficient AI.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:viridisgreen27@gmail.com">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?hl=en&user=Cz6w2swAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://github.com/viridisGreen/">GitHub</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:25%;max-width:25%">
+              <a href="images/profiles/hesong.png"><img style="width:100%;max-width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;border:3px solid #4A7C59;box-shadow:0 8px 32px rgba(74,124,89,0.12),inset 0 0 12px rgba(255,255,255,0.3);" alt="profile photo" src="images/profiles/hesong.png"></a>
+            </td>
+          </tr>
+        </tbody></table>
 
-      <ul >
-        <li><b>[2024.07]</b>
-           Joined Westlake University as a visiting student!</li>
-      </ul>
-      </td>
-    </tr>
+        <!-- News -->
+        <div style="padding:0 16px;">
+          <h2>🔥 News</h2>
+          <div class="news-scroll-box">
+            <ul class="news-list">
+              <li>
+                <span class="date-badge">2026.03</span>
+                ✨ <b>[Benchmark]</b> We are very proud to launch <a href="https://arxiv.org/abs/2603.19217">LVOmniBench</a>, the pioneering comprehensive evaluation benchmark of OmniLLMs in Long Audio-Video Understanding Evaluation! The dataset is available at <a href="https://huggingface.co/datasets/KD-TAO/LVOmniBench">[Hugging Face]</a> and <a href="https://github.com/KD-TAO/LVOmniBench">[GitHub]</a>.
+              </li>
+              <li>
+                <span class="date-badge">2026.02</span>
+                🎉 <b>[CVPR'26]</b> <a href="https://viridisgreen.github.io/EarlyTom/">EarlyTom</a> and <a href="https://ddsacu.github.io/QVGGT/">QVGGT</a> are accepted by CVPR 2026!
+              </li>
+              <li>
+                <span class="date-badge">2026.01</span>
+                🎉 <b>[ICLR'26]</b> OBS-Diff is accepted by ICLR 2026! Congrats to <a href="https://alrightlone.github.io/">Junhan</a>!
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Publications -->
+        <div style="padding:0 16px;">
+          <h2>📖 Publications</h2>
+
+          <div class="pub-card">
+            <div class="pub-card-thumb">
+              <div class="paper-tag">arXiv 2026</div>
+              <img src="images/LVOmniBench.png" alt="LVOmniBench">
+            </div>
+            <div class="pub-card-info pub-info">
+              <span class="papertitle">LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs</span>
+              <div style="margin-top:6px; margin-bottom:6px; color:#999;">
+                Keda Tao*, Yuhua Zheng*, Jia Xu, Wenjie Du, Kele Shao, <strong style="color:#006564;">Hesong Wang</strong>, Xueyi Chen, Xin Jin, Junhan Zhu, Bohan Yu, Weiqiang Wang, Jian Liu, Can Qin, Yulun Zhang, Ming-Hsuan Yang, Huan Wang
+              </div>
+              <em>arXiv, 2026</em><br>
+              <div style="margin-top:6px;">
+                [<a href="https://kd-tao.github.io/LVOmniBench/">Homepage</a>]
+                [<a href="https://arxiv.org/abs/2603.19217">arXiv</a>]
+                [<a href="https://github.com/KD-TAO/LVOmniBench">GitHub</a>]
+                [<a href="https://huggingface.co/datasets/KD-TAO/LVOmniBench">Hugging Face Dataset</a>]
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-card-thumb">
+              <div class="paper-tag">CVPR 2026</div>
+              <img src="images/EarlyTom.png" alt="EarlyTom">
+            </div>
+            <div class="pub-card-info pub-info">
+              <span class="papertitle">EarlyTom: Early Token Compression Completes Fast Video Understanding</span>
+              <div style="margin-top:6px; margin-bottom:6px; color:#999;">
+                <strong style="color:#006564;">Hesong Wang</strong><span style="color:#006564;">*</span>, Xin Jin*, Lu Lu, Chenhaowen Li, Jian Chen, Qiang Liu, Huan Wang
+              </div>
+              <em>CVPR, 2026</em><br>
+              <div style="margin-top:6px;">
+                [<a href="https://viridisgreen.github.io/EarlyTom/">Homepage</a>]
+                [<a href="https://arxiv.org/abs/2605.30010">arXiv</a>]
+                [<a href="https://github.com/viridisGreen/EarlyTom">GitHub</a>]
+                [<a href="https://huggingface.co/papers/2605.30010">Hugging Face</a>]
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-card-thumb">
+              <div class="paper-tag">CVPR 2026</div>
+              <img src="images/QVGGT.png" alt="QVGGT">
+            </div>
+            <div class="pub-card-info pub-info">
+              <span class="papertitle">QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer</span>
+              <div style="margin-top:6px; margin-bottom:6px; color:#999;">
+                Zhizhen Pan, <strong style="color:#006564;">Hesong Wang</strong>, Huan Wang
+              </div>
+              <em>CVPR, 2026</em><br>
+              <div style="margin-top:6px;">
+                [<a href="https://ddsacu.github.io/QVGGT/">Homepage</a>]
+                [<a href="https://github.com/DDsacu/QVGGT">GitHub</a>]
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-card-thumb">
+              <div class="paper-tag">ICLR 2026</div>
+              <img src="images/OBS-Diff.png" alt="OBS-Diff">
+            </div>
+            <div class="pub-card-info pub-info">
+              <span class="papertitle">OBS-Diff: Accurate Pruning For Diffusion Models in One-Shot</span>
+              <div style="margin-top:6px; margin-bottom:6px; color:#999;">
+                Junhan Zhu, <strong style="color:#006564;">Hesong Wang</strong>, Mingluo Su, Zefang Wang, Huan Wang
+              </div>
+              <em>ICLR, 2026</em><br>
+              <div style="margin-top:6px;">
+                [<a href="https://alrightlone.github.io/OBS-Diff-Webpage/">Homepage</a>]
+                [<a href="https://arxiv.org/abs/2510.06751">arXiv</a>]
+                [<a href="https://github.com/Alrightlone/OBS-Diff">GitHub</a>]
+              </div>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-card-thumb">
+              <div class="paper-tag">ICLR DeLTa Workshop 2025</div>
+              <img src="images/Diffusion.png" alt="Diffusion">
+            </div>
+            <div class="pub-card-info pub-info">
+              <span class="papertitle">Improved Techniques for Training Smaller and Faster Stable Diffusion</span>
+              <div style="margin-top:6px; margin-bottom:6px; color:#999;">
+                <strong style="color:#006564;">Hesong Wang</strong>, Huan Wang
+              </div>
+              <em>ICLR DeLTa Workshop, 2025</em><br>
+              <div style="margin-top:6px;">
+                [<a href="https://openreview.net/pdf?id=t9m14jybcI">Paper</a>]
+                [<a href="https://openreview.net/forum?id=t9m14jybcI">OpenReview</a>]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experiences -->
+        <div style="padding:0 16px;">
+          <h2>🔬 Experiences</h2>
+          <div class="pub-card exp-card">
+            <img src="images/AlibabaCloud.png" alt="Alibaba Cloud">
+            <div class="exp-info">
+              <h3>Alibaba Cloud</h3>
+              <p>2025.09 ~ Present, Hangzhou</p>
+              <p>Research Intern, Alibaba Innovative Research (AIR) Program</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+          <tr>
+            <td style="padding:0">
+              <br>
+              <p style="text-align:right;font-size:small;color:#999;">
+                Template from <a href="https://jonbarron.info/" style="color:#999;">Jon Barron</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+      </td></tr>
     </tbody></table>
-
-
-<!-- =================== Experiences ============================== -->
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-  <tr>
-    <td>
-      <h1>Research Experience</h1>
-    </td>
-  </tr>
-</tbody></table>
-<table width="100%" align="center" border="0" cellpadding="20"><tbody>
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <img src="images/westlake.png" style="width:100%;text-align: center;" ></td>
-    <td width="75%" valign="center">
-      <h3>ENCODE Lab, Westlake University</h4>
-      <p>2024.05 ~ Present</p>
-      <p>Visiting Student, supervised by Prof. <a href="https://huanwang.tech/">Huan Wang</a></p>
-      Conducted research on on-device text-to-image (T2I) diffusion models, focusing on optimizing the performance of neural networks on mobile devices.
-      <br>
-    </td>
-  </tr>
-
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <img src="images/bupt.png"  style="width:100%;text-align: center;"></td>
-    <td width="75%" valign="center">
-      <h3>State Key Laboratory of Networking and Switching Technology, BUPT</h3>
-      <p>2022.05 ~ 2023.04</p>
-      <p>Research Intern, supervised by Prof. <a href="https://wenjia.ruantang.top/">Wenjia Xu</a></p>
-      Conducted research on continual learning, particularly focusing on class-incremental learning, to enhance the adaptability of neural networks.
-      <br>
-    </td>
-  </tr>
-
-<!--   <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <img src="images/qmul.jpg"  style="width:100%;text-align: center;"></td>
-    <td width="75%" valign="center">
-      <h3>Queen Mary University of London (QMUL)</h3>
-      <p>2021.09 ~ Present</p>
-      <p>Student, joint program with <a href="https://www.bupt.edu.cn/">BUPT</a></p>
-      <br>
-    </td>
-  </tr> -->
-
-</tbody></table>
-
-
-<!-- ====================== Projects =========================== -->
-
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-      <tr>
-        <td>
-          <h1>Projects</h1>
-        </td>
-      </tr>
-    </tbody></table>
-
-    <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <img src="images/nerf.gif" style="width:100%;text-align: center;" ></td>
-        <td width="75%" valign="center">
-          <h3><a href="https://github.com/viridisGreen/NeRF_Reproduction_under_learning_nerf">NeRF Reproduction Under Specific Framework</a></h3>
-          <p>Project Owner, 2024.04</p>
-          Reproduced Neural Radiance Field (NeRF) under the framework "<a href="https://github.com/pengsida/learning_nerf">learning_nerf</a>", which is created by the <a href="https://xzhou.me/group">3DV Group</a>. Reproduce notes is available <a href="https://viridisgreen.notion.site/nerf-289a4f9c81c546ef9abaea3bc71d4ef7?pvs=4">here</a>.
-          <br>
-        </td>
-      </tr>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <img src="images/mlproj.jpg" width="200px"></td>
-        <td width="75%" valign="center">
-          <h3><a href="https://github.com/viridisGreen/CBU5201_Mini-Project">Machine Learning Mini-Project</a></h3>
-          <p>Project Owner, 2023.12</p>
-          Built a complete deep learning pipeline in this project, which contains a supervised learning task and an unsupervised learning task. The project uses the dataset "Genki4k", smile-detection and motion estimation are conducted for supervised learning tasks while clustering is conducted for the unsupervised learning task.
-          <br>
-        </td>
-      </tr>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <img src="images/stanford.webp" width="200px"></td>
-        <td width="75%" valign="center">
-          <h3><a href="https://viridisgreen.notion.site/CS231n-Learning-Notes-ca61951b93344393bdf419400e8dddd9?pvs=4">CS231n: Deep Learning for Computer Vision - Learning Notes</a></h3>
-          <p>Project Owner, 2023.05 ~ 2023.08</p>
-          My records and notes on learning Stanford CS231n.
-        </td>
-      </tr>
-
-    </tbody></table>
-
-
-<!-- ===================== MISC ============================ -->
-    
   </body>
 </html>
